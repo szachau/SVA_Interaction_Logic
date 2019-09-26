@@ -1,3 +1,5 @@
+##Validated in JSON
+
 ###Pen
 var pen = {
 	surface: "wood",
