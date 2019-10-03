@@ -1,0 +1,67 @@
+import turtle
+import random
+import time
+
+#background color
+screen = turtle.Screen()
+screen.bgcolor("black")
+
+#color line setup
+alpha = turtle.Turtle()
+alpha.color ('White')
+alpha.pensize(40)
+
+beta = turtle.Turtle()
+beta.color ('Dodger Blue')
+beta.pensize(40)
+
+third = turtle.Turtle()
+third.color ('Red')
+third.pensize(40)
+
+fourth = turtle.Turtle()
+fourth.color ('Light Slate Gray')
+fourth.pensize(40)
+
+#movement
+def draw_shape():
+  alpha.left(90)
+  beta.right(90)
+
+
+  alpha.speed(1)
+  beta.speed(2)
+  third.speed(4)
+
+  alpha.forward(50)
+  beta.forward(50)
+  third.forward(50)
+  fourth.backward(50)
+
+  def move():
+    alpha.penup()
+
+    alpha.goto(random.randint(-50,50))
+    beta.goto(random.randint(-50,50))
+    third.goto(random.randint(-50,50))
+    fourth.goto(random.randint(-50,50))
+
+    pendown()
+
+    alpha.left(90)
+    beta.right(90)
+
+    alpha.speed(1)
+    beta.speed(2)
+    third.speed(4)
+
+    alpha.forward(50)
+    beta.forward(50)
+    third.forward(50)
+    fourth.backward(50)
+
+
+
+#loop
+for i in range(300):
+  draw_shape()
